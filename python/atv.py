@@ -495,34 +495,186 @@
 # lista = [1, -2, 3, -4, 5]
 # print(soma_positivo(lista))  
 
-def lista_soma(lista1, lista2):
-  """
-  Soma os elementos correspondentes de duas listas.
+# def mais_caracteres(s):
+#     if not s:
+#         return None
+#      contagem = {}
+#     for caractere in s:
+#         if caractere in contagem:
+#             contagem[caractere] += 1
+#         else:
+#             contagem[caractere] = 1
+#             max_ocorrencias = -1
+#     caractere_mais_frequente = None
+#     for caractere in s:
+#         if contagem[caractere] > max_ocorrencias:
+#             max_ocorrencias = contagem[caractere]
+#             caractere_mais_frequente = caractere
+    
+#     return caractere_mais_frequente
+# print(mais_caracteres("banana")) 
+# print(mais_caracteres("abacaxi"))
+# print(mais_caracteres("")) 
 
-  Args:
-    lista1: A primeira lista de inteiros.
-    lista2: A segunda lista de inteiros.
+# def sem_vogal(s):
+   
+#     vogais = 'aeiou'
+    
+    
+#     nova_string = ''
+#     for caracter in s:
+#         if caracter not in vogais:
+#             nova_string += caracter
+    
+#     return nova_string
+# print(sem_vogal("abcdefghijklmnopqrstuvwxyz")) 
 
-  Returns:
-    Uma nova lista com as somas dos elementos correspondentes.
-  """
+#LISTA DENTRO DE LISTA
+# minha_lista = [[5,2,3],[4,1,],[2,2,5,1]]
+# print(minha_lista)
+# print(minha_lista[1])
+# print(minha_lista[1][0])
 
-  # Verifica se as listas têm o mesmo tamanho (opcional)
-  if len(lista1) != len(lista2):
-    raise ValueError("As listas devem ter o mesmo tamanho.")
+# pessoas = [["bety", 10,1,37],["pedro",7,1,25],["emily",32,14,5]]
+# for pessoas in pessoas:
+# nome = pessoas[0]
+# idade = pessoas[1]
+#altura = pessoas[2]
 
-  # Cria uma lista vazia para armazenar os resultados
-  resultado = []
+# minha_matriz = [[1,2,3], [3,2,1],[4,5,6]]
+# print(minha_matriz[0][1])
+# minha_matriz[1][0] = 10
+# print(minha_matriz)
 
-  # Itera sobre os elementos das listas, somando e adicionando ao resultado
-  for i in range(len(lista1)):
-    soma = lista1[i] + lista2[i]
-    resultado.append(soma)
 
-  return resultado
+# def imprime_tabuleiro(tabuleiro):
+#     """Imprime o tabuleiro atual"""
+#     print(f" {tabuleiro[0][0]} | {tabuleiro[0][1]} | {tabuleiro[0][2]} ")
+#     print("---+---+---")
+#     print(f" {tabuleiro[1][0]} | {tabuleiro[1][1]} | {tabuleiro[1][2]} ")
+#     print("---+---+---")
+#     print(f" {tabuleiro[2][0]} | {tabuleiro[2][1]} | {tabuleiro[2][2]} ")
 
-# Exemplo de uso:
-lista_a = [1, 2, 3]
-lista_b = [4, 5, 6]
-resultado = lista_soma(lista_a, lista_b)
-print(resultado)  # Saída: [5, 7, 9]
+# def jogo_o_jogo(tabuleiro, x, y, caracter):
+#     """Coloca o símbolo dado nas coordenadas dadas no tabuleiro"""
+#     if tabuleiro[x][y] != " ":
+#         print("Posição já ocupada!")
+#         return False
+#     tabuleiro[x][y] = caracter
+#     return True
+
+# def verifica_vencedor(tabuleiro):
+#     """Verifica se há um vencedor"""
+
+#     for i in range(3):
+#         if tabuleiro[i][0] == tabuleiro[i][1] == tabuleiro[i][2] != " ":
+#             return tabuleiro[i][0]
+    
+ 
+#     for i in range(3):
+#         if tabuleiro[0][i] == tabuleiro[1][i] == tabuleiro[2][i] != " ":
+#             return tabuleiro[0][i]
+   
+#     if tabuleiro[0][0] == tabuleiro[1][1] == tabuleiro[2][2] != " ":
+#         return tabuleiro[0][0]
+#     if tabuleiro[0][2] == tabuleiro[1][1] == tabuleiro[2][0] != " ":
+#         return tabuleiro[0][2]
+    
+#     for i in range(3):
+#         for j in range(3):
+#             if tabuleiro[i][j] == " ":
+#                 return None
+    
+#     return "Empate"
+
+# def main():
+#     tabuleiro = [[" " for _ in range(3)] for _ in range(3)]
+#     jogador_atual = "X"
+    
+#     while True:
+#         imprime_tabuleiro(tabuleiro)
+#         x = int(input(f"Jogador {jogador_atual}, digite a linha (0-2): "))
+#         y = int(input(f"Jogador {jogador_atual}, digite a coluna (0-2): "))
+        
+#         if jogo_o_jogo(tabuleiro, x, y, jogador_atual):
+#             resultado = verifica_vencedor(tabuleiro)
+#             if resultado is not None:
+#                 imprime_tabuleiro(tabuleiro)
+#                 if resultado == "Empate":
+#                     print("Empate!")
+#                 else:
+#                     print(f"Jogador {resultado} venceu!")
+#                 break
+#             jogador_atual = "O" if jogador_atual == "X" else "X"
+
+# if __name__ == "__main__":
+#     main()
+
+# meu_dicionario = {}
+# meu_dicionario["apina"] = "macaco"
+# meu_dicionario["banaani"] = "banana"
+# meu_dicionario["cembalo"] = "cravo"
+# print(meu_dicionario)
+# print(meu_dicionario["apina"])
+# palavra = input("por favor, digite uma palavra: ")
+# if palavra in meu_dicionario:
+#     print("traduçao ", meu_dicionario[palavra])
+# else:
+#     print("palavra nao encontrada")
+
+# resultado = {}
+# resultado["mary"] = 4
+# resultado["alice"] = 5
+# resultado["larry"] = 2
+
+# lists = {}
+# lists[5] = [1,2,3]
+# lists[42] = [5,4,5,4,5]
+# lists[100] = [5,2,3]
+
+# meu_dicionario = {}
+# meu_dicionario["apina"] = "macaco"
+# meu_dicionario["banaani"] = "banana"
+# meu_dicionario["cembalo"] = "cravo"
+
+# for chave in meu_dicionario:
+#     print("chave", chave)
+#     print("valor",meu_dicionario[chave])
+
+
+# lista_palavras = [
+#    "banana", "leite", "cerveja", "queijo", "leite azedo", "suco", "linguiça",
+#    "tomate", "pepino", "manteiga", "margarina", "queijo", "linguiça",
+#    "cerveja", "leite azedo", "leite azedo", "manteiga", "cerveja", "chocolate"
+#  ]
+
+# def contagens(minhas_lista):
+#     palavras = {}
+#     for palavra in minhas_lista:
+#         if palavra not in palavras:
+#             palavras[palavra] = 0
+#             palavras[palavra] += 1
+#             return palavras
+# print(contagens(lista_palavras))
+
+# def histogram(s):
+
+#     freq = {}
+#     for caractere in s:
+#         if caractere in freq:
+#             freq[caractere] += 1
+#         else:
+#             freq[caractere] = 1
+
+   
+#     for caractere in sorted(freq.keys()):
+#         print(f"{caractere}: {'*' * freq[caractere]}")
+
+
+# histogram("abba")
+
+# pessoas = [["bety", 10,1,37],["pedro",7,1,25],["emily",32,14,5]]
+# for pessoas in pessoas:
+# nome = pessoas[0]
+# idade = pessoas[1]
+#altura = pessoas[2]
